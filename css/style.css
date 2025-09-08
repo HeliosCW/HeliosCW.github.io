@@ -41,6 +41,7 @@ a:visited {
 
 a:hover {
     color: #ffab00; /* 使用强调色 */
+    text-decoration: none;
 }
 
 a:active {
