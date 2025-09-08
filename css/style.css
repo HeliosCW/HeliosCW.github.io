@@ -26,6 +26,41 @@ body {
     padding: 0 20px;
 }
 
+/* 超链接颜色样式 */
+a:link {
+    color: #283593; /* 基于主色调的深蓝色 */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:visited {
+    color: #1a237e; /* 使用主色调本身，比未访问链接稍深 */
+    opacity: 0.85; /* 添加轻微透明度区分已访问状态 */
+}
+
+a:hover {
+    color: #ffab00; /* 使用强调色 */
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ffd700; /* 使用次要颜色 */
+}
+
+/* 为内容区域的链接添加特殊效果 */
+.card a, section a {
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed transparent;
+    transition: all 0.3s ease;
+}
+
+.card a:hover, section a:hover {
+    border-bottom-color: #ffab00;
+    text-decoration: none;
+}
+
 /* 头部样式 */
 header {
     background: linear-gradient(135deg, var(--primary-color), #3949ab);
