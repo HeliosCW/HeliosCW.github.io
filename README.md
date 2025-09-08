@@ -1,5 +1,6 @@
 # 赫利俄斯联邦
-[![官网](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-%E8%B5%AB%E5%88%A9%E4%BF%84%E6%96%AF%E8%81%94%E9%82%A6-blue)](https://helios-federation.github.io)
+[![Website](https://img.shields.io/badge/Website-Helios%20Commonweald-blue)](https://helioscw.github.io)
+[![官网](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-%E8%B5%AB%E5%88%A9%E4%BF%84%E6%96%AF%E8%81%94%E9%82%A6-blue)](https://helioscw.github.io)
 
 # HeliosCW.github.io版权
 © 2025 Helios Commonwealth. All rights reserved. <br>
