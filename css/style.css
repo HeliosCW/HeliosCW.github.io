@@ -47,7 +47,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,215,0,0.2)" stroke-width="1"/><path d="M50,10 L60,40 L90,40 L65,60 L75,90 L50,70 L25,90 L35,60 L10,40 L40,40 Z" fill="rgba(255,215,0,0.3)"/></svg>');
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height"100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,215,0,0.2)" stroke-width="1"/><path d="M50,10 L60,40 L90,40 L65,60 L75,90 L50,70 L25,90 L35,60 L10,40 L40,40 Z" fill="rgba(255,215,0,0.3)"/></svg>');
     background-size: 200px 200px;
     opacity: 0.1;
 }
@@ -78,7 +78,7 @@ h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    color: var(--white); /* 确保标题文字颜色为白色 */
+    color: var(--white);
 }
 
 .motto {
@@ -281,7 +281,7 @@ section {
     display: none;
 }
 
-/* 历史时间线 - 修正文字颜色问题 */
+/* 历史时间线 - 首页专用 */
 .timeline {
     position: relative;
     margin: 30px 0;
@@ -323,10 +323,10 @@ section {
     padding-left: 40px;
 }
 
-.timeline-date {
+.timeline-date-index {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--white); /* 确保时间文字为白色 */
+    color: var(--white);
     padding: 5px 15px;
     border-radius: 20px;
     font-weight: bold;
@@ -338,7 +338,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     padding: 15px;
-    color: var(--text-color); /* 确保内容文字颜色正确 */
+    color: var(--text-color);
 }
 
 .timeline-content h4 {
@@ -395,12 +395,12 @@ section {
 }
 
 .page-header h1 {
-    color: var(--primary-color); /* 修正为深色，在白色背景上显示 */
+    color: var(--primary-color);
     font-size: 2.5rem;
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
-    text-shadow: none; /* 移除首页的阴影效果 */
+    text-shadow: none;
 }
 
 .page-header h1::after {
@@ -628,15 +628,15 @@ section {
     border: 3px solid var(--primary-color);
 }
 
-/* 修正阿斯忒拉页面时间线日期文字颜色 */
-.timeline-item-special .timeline-date {
-    color: var(--primary-color); /* 使用主色调，确保在浅色背景上可见 */
-    background-color: rgba(26, 35, 126, 0.1); /* 使用浅色背景 */
+/* 修正阿斯忒拉页面时间线日期 */
+.timeline-date-asteria {
     font-weight: bold;
+    color: var(--primary-color);
     margin-bottom: 5px;
+    display: block;
 }
 
-.timeline-item-special .timeline-content {
+.timeline-content-asteria {
     background: rgba(26, 35, 126, 0.05);
     padding: 15px;
     border-radius: 8px;
@@ -644,7 +644,7 @@ section {
     color: var(--text-color);
 }
 
-.timeline-item-special .timeline-content p {
+.timeline-content-asteria p {
     color: var(--text-color);
     margin: 0;
 }
