@@ -628,13 +628,15 @@ section {
     border: 3px solid var(--primary-color);
 }
 
-.timeline-date {
+/* 修正阿斯忒拉页面时间线日期文字颜色 */
+.timeline-item-special .timeline-date {
+    color: var(--primary-color); /* 使用主色调，确保在浅色背景上可见 */
+    background-color: rgba(26, 35, 126, 0.1); /* 使用浅色背景 */
     font-weight: bold;
-    color: var(--primary-color);
     margin-bottom: 5px;
 }
 
-.timeline-content {
+.timeline-item-special .timeline-content {
     background: rgba(26, 35, 126, 0.05);
     padding: 15px;
     border-radius: 8px;
@@ -642,7 +644,7 @@ section {
     color: var(--text-color);
 }
 
-.timeline-content p {
+.timeline-item-special .timeline-content p {
     color: var(--text-color);
     margin: 0;
 }
