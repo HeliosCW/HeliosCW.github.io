@@ -78,6 +78,7 @@ h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: var(--white); /* 确保标题文字颜色为白色 */
 }
 
 .motto {
@@ -90,6 +91,7 @@ h1 {
 .contact {
     font-size: 1.1rem;
     margin-top: 20px;
+    color: var(--white);
 }
 
 /* 超链接颜色样式 */
@@ -279,7 +281,7 @@ section {
     display: none;
 }
 
-/* 历史时间线 */
+/* 历史时间线 - 修正文字颜色问题 */
 .timeline {
     position: relative;
     margin: 30px 0;
@@ -324,7 +326,7 @@ section {
 .timeline-date {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--white); /* 确保时间文字为白色 */
     padding: 5px 15px;
     border-radius: 20px;
     font-weight: bold;
@@ -336,6 +338,17 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     padding: 15px;
+    color: var(--text-color); /* 确保内容文字颜色正确 */
+}
+
+.timeline-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    color: var(--text-color);
+    margin: 0;
 }
 
 /* 法律条款样式 */
@@ -358,6 +371,7 @@ section {
 
 .legal-content {
     padding-left: 20px;
+    color: var(--text-color);
 }
 
 .legal-content ul {
@@ -367,6 +381,7 @@ section {
 
 .legal-content li {
     margin-bottom: 8px;
+    color: var(--text-color);
 }
 
 /* 阿斯忒拉页面特有样式 */
@@ -380,11 +395,12 @@ section {
 }
 
 .page-header h1 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* 修正为深色，在白色背景上显示 */
     font-size: 2.5rem;
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+    text-shadow: none; /* 移除首页的阴影效果 */
 }
 
 .page-header h1::after {
@@ -425,6 +441,13 @@ section {
 .section-icon {
     font-size: 1.5rem;
     margin-right: 15px;
+    color: var(--white);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
 }
 
 /* 位置网格 */
@@ -492,6 +515,10 @@ section {
     margin-bottom: 10px;
 }
 
+.feature-content p {
+    color: var(--text-color);
+}
+
 /* 气候数据 */
 .climate-data {
     display: grid;
@@ -517,11 +544,13 @@ section {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 5px;
+    color: var(--primary-color);
 }
 
 .climate-label {
     font-size: 0.9rem;
     opacity: 0.9;
+    color: var(--text-color);
 }
 
 /* 生态系统网格 */
@@ -557,7 +586,7 @@ section {
     font-size: 0.9rem;
 }
 
-/* 时间线 */
+/* 时间线 - 阿斯忒拉页面专用 */
 .timeline-special {
     position: relative;
     margin-top: 30px;
@@ -610,6 +639,12 @@ section {
     padding: 15px;
     border-radius: 8px;
     border-left: 4px solid var(--secondary-color);
+    color: var(--text-color);
+}
+
+.timeline-content p {
+    color: var(--text-color);
+    margin: 0;
 }
 
 /* 地图占位符 */
@@ -644,6 +679,7 @@ section {
     padding: 2px 5px;
     border-radius: 3px;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 /* 页脚 */
@@ -773,5 +809,12 @@ footer {
 
     nav ul li a {
         padding: 10px 20px;
+        color: var(--white);
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: var(--secondary-color);
+        border-bottom: 3px solid var(--secondary-color);
     }
 }
