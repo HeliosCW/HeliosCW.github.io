@@ -10,25 +10,25 @@ Strictly prohibited from any reproduction or redistribution. <br>
 
 ----
 # 文件结构
-赫利俄斯联邦/
-├── README.md                    # 项目说明文档
-├── index.html                   # 网站主页
-├── favicon_io/                  # 网站图标文件
-│   ├── apple-touch-icon.png     # Apple设备图标
-│   ├── favicon-32x32.png        # 32x32网站图标
-│   ├── favicon-16x16.png        # 16x16网站图标
-│   └── site.webmanifest         # PWA清单文件
-├── css/                         # 样式表目录
-│   └── style.css                # 主要样式文件
-├── js/                          # JavaScript脚本目录
-│   └── main.js                  # 主要JavaScript功能
-├── pngs/                        # 图片资源目录
-│   └── logo.ico                 # 网站标志图标
-└── pages/                       # 其他页面目录
-    ├── asteria.html             # 阿斯忒拉州基本信息页面
-    ├── constitution.html        # 联邦宪法页面
-    ├── power.html               # 权力法页面
-    └── territory.html           # 领土探索法页面
+赫利俄斯联邦/<br>
+├── README.md                    # 项目说明文档<br>
+├── index.html                   # 网站主页<br>
+├── favicon_io/                  # 网站图标文件<br>
+│   ├── apple-touch-icon.png     # Apple设备图标<br>
+│   ├── favicon-32x32.png        # 32x32网站图标<br>
+│   ├── favicon-16x16.png        # 16x16网站图标<br>
+│   └── site.webmanifest         # PWA清单文件<br>
+├── css/                         # 样式表目录<br>
+│   └── style.css                # 主要样式文件<br>
+├── js/                          # JavaScript脚本目录<br>
+│   └── main.js                  # 主要JavaScript功能<br>
+├── pngs/                        # 图片资源目录<br>
+│   └── logo.ico                 # 网站标志图标<br>
+└── pages/                       # 其他页面目录<br>
+    ├── asteria.html             # 阿斯忒拉州基本信息页面<br>
+    ├── constitution.html        # 联邦宪法页面<br>
+    ├── power.html               # 权力法页面<br>
+    └── territory.html           # 领土探索法页面<br>
 
 ----
 理想不朽，世界的荣光与吾等同在！
