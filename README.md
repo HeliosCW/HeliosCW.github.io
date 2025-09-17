@@ -2,14 +2,9 @@
 [![Website](https://img.shields.io/badge/Website-Helios%20Commonweald-blue)](https://helioscw.github.io)
 [![官网](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-%E8%B5%AB%E5%88%A9%E4%BF%84%E6%96%AF%E8%81%94%E9%82%A6-blue)](https://helioscw.github.io)
 
-# HeliosCW.github.io版权
-© 2025 Helios Commonwealth. All rights reserved. <br>
-Official website of the Helios Commonwealth. <br>
-For entertainment purposes only. <br>
-Strictly prohibited from any reproduction or redistribution. <br>
 
 ----
-# 赫利俄斯联邦网站文件结构
+# 文件结构
 
 ## 📁 根目录文件
 
@@ -94,3 +89,11 @@ Strictly prohibited from any reproduction or redistribution. <br>
 - ✅ **交互体验**: 包含滚动动画、悬停效果、表单验证
 - ✅ **语义化HTML**: 使用合适的HTML5标签结构
 - ✅ **性能优化**: 外部资源引用、样式和脚本分离
+
+----
+
+# 版权
+© 2025 Helios Commonwealth. All rights reserved. <br>
+Official website of the Helios Commonwealth. <br>
+For entertainment purposes only. <br>
+Strictly prohibited from any reproduction or redistribution. <br>
