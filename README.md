@@ -13,9 +13,12 @@
 
 ## 📁 favicon_io/ - 网站图标文件夹
 
+- **android-chrome-192*192.png** - 安卓设备192x192网站图标
+- **android-chrome-512*512.png** - 安卓设备512x512网站图标
 - **apple-touch-icon.png** - Apple设备图标
 - **favicon-32x32.png** - 32x32网站图标  
 - **favicon-16x16.png** - 16x16网站图标
+- **favicon.png** - 网站图标
 - **site.webmanifest** - PWA清单文件
 
 ## 📁 css/ - 样式表目录
@@ -28,7 +31,7 @@
 
 ## 📁 pngs/ - 图片资源目录
 
-- **logo.ico** - 网站标志图标
+- **logo.ico** - 网站标志图标（赫利俄斯国徽）
 
 ## 📁 pages/ - 其他页面目录
 
@@ -36,6 +39,7 @@
 - **constitution.html** - 联邦宪法页面
 - **power.html** - 权力法页面
 - **territory.html** - 领土探索法页面
+- **organization.html** - 赫利俄斯政府说明
 
 ---
 
@@ -79,6 +83,10 @@
 ### pages/territory.html
 **作用**: 领土探索法页面  
 **内容**: 领土探索的基本原则、探索规范和限制条件、探索成果的处理和保护、包含会长的名言引用
+
+### pages/organization.html
+**作用**: 联邦政府页面  
+**内容**: 联邦政府组成的详细信息
 
 ---
 
