@@ -223,20 +223,127 @@
             padding-left: 15px;
         }
         
-        /* Tally 表单容器样式 */
-        .tally-form-container {
+        /* 申请表单样式 */
+        .application-form {
             margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            background-color: var(--white);
+            border: 1px solid #e0e0e0;
         }
         
-        .tally-form-container iframe {
-            border: none;
-            width: 100%;
-            min-height: 500px;
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
             display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 5px rgba(255, 171, 0, 0.5);
+        }
+        
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #303f9f;
+        }
+        
+        .error-message {
+            color: #d32f2f;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        /* 历史时间线 */
+        .timeline {
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            width: 50%;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+        
+        .timeline-date {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 15px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
         }
         
         /* 响应式设计 */
@@ -272,10 +379,6 @@
             .emblem {
                 width: 100px;
                 height: 100px;
-            }
-            
-            .tally-form-container iframe {
-                min-height: 600px;
             }
         }
     </style>
@@ -322,8 +425,7 @@
                 <p><strong>官方邮箱：</strong>HeliosCW@proton.me</p>
                 <p><strong>公民申请：</strong>欢迎加入赫利俄斯联邦！请填写以下申请表：</p>
                 
-                <!-- Tally 表单容器 -->
-                <div class="tally-form-container">
+                <div class="application-form">
                     <iframe src="https://tally.so/r/me45EE" title="赫利俄斯联邦公民申请">
                     </iframe>
                 </div>
