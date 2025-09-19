@@ -223,127 +223,20 @@
             padding-left: 15px;
         }
         
-        /* 申请表单样式 */
-        .application-form {
+        /* Tally 表单容器样式 */
+        .tally-form-container {
             margin-top: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
             border-radius: 8px;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .form-group {
-            margin-bottom: 15px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 5px rgba(255, 171, 0, 0.5);
-        }
-        
-        .btn {
-            background-color: var(--primary-color);
-            color: var(--white);
-            border: none;
-            padding: 12px 24px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #303f9f;
-        }
-        
-        .error-message {
-            color: #d32f2f;
-            margin-top: 10px;
-            display: none;
-        }
-        
-        /* 历史时间线 */
-        .timeline {
-            position: relative;
-            margin: 30px 0;
-        }
-        
-        .timeline::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background-color: var(--accent-color);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-            width: 50%;
-            opacity: 0;
-            transform: scale(0.9);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .timeline-item.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-right: 40px;
-            text-align: right;
-        }
-        
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 40px;
-        }
-        
-        .timeline-date {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .timeline-content {
-            background-color: var(--white);
-            border-radius: 8px;
+            overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 15px;
+            background-color: var(--white);
         }
         
-        /* 页脚 */
-        footer {
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 30px 0;
+        .tally-form-container iframe {
+            border: none;
+            width: 100%;
+            min-height: 500px;
+            display: block;
         }
         
         /* 响应式设计 */
@@ -379,6 +272,10 @@
             .emblem {
                 width: 100px;
                 height: 100px;
+            }
+            
+            .tally-form-container iframe {
+                min-height: 600px;
             }
         }
     </style>
@@ -425,13 +322,15 @@
                 <p><strong>官方邮箱：</strong>HeliosCW@proton.me</p>
                 <p><strong>公民申请：</strong>欢迎加入赫利俄斯联邦！请填写以下申请表：</p>
                 
-                <div class="application-form">
-                    <div class="form-group">
-                        <label for="applicantName">姓名：</label>
-                        <input type="text" id="applicantName" placeholder="请输入您的姓名">
-                    </div>
-                    <button class="btn" id="submitApplication">提交申请</button>
-                    <div class="error-message" id="errorMessage">请先输入姓名</div>
+                <!-- Tally 表单容器 -->
+                <div class="tally-form-container">
+                    <iframe src="https://tally.so/r/me45EE?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                            width="100%" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0" 
+                            title="赫利俄斯联邦公民申请">
+                    </iframe>
                 </div>
                 
                 <p>赫利俄斯联邦是一个建立在阿斯忒拉岛上的虚拟国家，致力于理想主义原则和公民参与式治理。联邦由多个州组成，拥有完善的宪法体系和政府机构。</p>
@@ -590,42 +489,6 @@
     </footer>
     
     <script>
-        // 公民申请功能
-        document.getElementById('submitApplication').addEventListener('click', function() {
-            const nameInput = document.getElementById('applicantName');
-            const errorMessage = document.getElementById('errorMessage');
-            const name = nameInput.value.trim();
-            
-            // 检查是否输入了姓名
-            if (name === '') {
-                errorMessage.style.display = 'block';
-                return;
-            }
-            
-            // 隐藏错误消息
-            errorMessage.style.display = 'none';
-            
-            // 构建邮件内容
-            const subject = encodeURIComponent('赫利俄斯联邦公民申请 - ' + name);
-            const body = encodeURIComponent(`尊敬的赫利俄斯联邦政府：
-
-我是${name}。
-我申请成为赫利俄斯联邦公民，并陈诺：
-1. 严格遵守赫利俄斯联邦宪法及其衍生法
-2. 在上述内容与所在地区法律违背的情况下，优先遵守所在地区法律
-
-理想不朽，世界的荣光与吾等同在！`);
-            
-            // 创建mailto链接并打开
-            const mailtoLink = `mailto:helioscw@proton.me?subject=${subject}&body=${body}`;
-            window.location.href = mailtoLink;
-        });
-        
-        // 当用户开始在输入框中输入时，隐藏错误消息
-        document.getElementById('applicantName').addEventListener('input', function() {
-            document.getElementById('errorMessage').style.display = 'none';
-        });
-        
         // 元素浮现动画
         document.addEventListener('DOMContentLoaded', function() {
             // 创建Intersection Observer实例
@@ -658,7 +521,3 @@
     </script>
 </body>
 </html>
-
-
-
-
